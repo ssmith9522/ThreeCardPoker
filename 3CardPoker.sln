@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3CardPoker", "3CardPoker\3CardPoker.csproj", "{14C6A778-6E51-495B-AC5C-5BCA2F4A19D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3CardPoker", "3CardPoker\3CardPoker.csproj", "{14C6A778-6E51-495B-AC5C-5BCA2F4A19D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{9E588D9C-01B2-496F-BB74-D3AFA48B7628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{14C6A778-6E51-495B-AC5C-5BCA2F4A19D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14C6A778-6E51-495B-AC5C-5BCA2F4A19D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14C6A778-6E51-495B-AC5C-5BCA2F4A19D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E588D9C-01B2-496F-BB74-D3AFA48B7628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E588D9C-01B2-496F-BB74-D3AFA48B7628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E588D9C-01B2-496F-BB74-D3AFA48B7628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E588D9C-01B2-496F-BB74-D3AFA48B7628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
