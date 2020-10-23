@@ -1,0 +1,11 @@
+﻿NOTES:
+
+Did not really require the "ThreeCardPokerHandRank" class as it only contains a single integer value,  
+but chose to do so for readability and provide a home for the ranking constants I use for scoring. (As well as the explanation for the scoring logic)
+
+Also,  as it turned out,  did not really need to store the "id" of the player in the player class,  but decided to keep it anyway for clairity and if the Player class was to be reused for other games,  it could provide value there.
+
+Taking the statement "The output should simply be the id of the winning player" literally,  I removed the input prompts.  Also a little cleaner if you have text files of your test cases that you're piping in for input.
+
+Nothing in the requirements said the cards were coming from a single deck,  so I did not add any validation against duplicate cards entering the game.
+
