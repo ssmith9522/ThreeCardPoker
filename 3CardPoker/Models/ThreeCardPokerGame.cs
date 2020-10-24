@@ -12,6 +12,13 @@ namespace _3CardPoker.Models
 		public const int threeOfAKind = 3;
 		public const bool verbose = false;
 
+		/* This constant represents the adjustment required when evaluating an Ace-Low straight
+		 * In most cases we treat Ace as a high card,  in this case it shouldn't be.
+		 * In this case the High-Card Ranking would be: 2864 because Ace was treated as high card    ((14*200) + (3*20) + (2*2))
+		 * With Ace-Low,  the High-Card Ranking SHOULD be:  642 = ((3*200) + (2*20) + (1*2))
+		 * The difference between the two values is 2222  */
+		public const int cardRankAdjustment_AceLowStraight = 2222;
+
 		override public string GetWinner()
 		{
 			StringBuilder winningPlayers = new StringBuilder("");
@@ -138,6 +145,9 @@ namespace _3CardPoker.Models
 						/* The above logic is a special case for a straight with Ace being low card.  
 						 * Because have the ranking for Ace is at 14 (For Ace High),  we have an Ace low straight when the current card is two,  
 						 * the previouis card was a three and the first card was an Ace based on evaluation sort order */
+
+						/* Fix card rankning in this case to make sure Ace is low card */
+						handRanking.Ranking -= cardRankAdjustment_AceLowStraight;
 
 						/* Give the counter a bonus increment to account for the Ace */
 						longestRankRun++;

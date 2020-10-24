@@ -102,6 +102,35 @@ namespace UnitTest
 		}
 
 		[TestMethod]
+		public void AceLowStraight_vs_OtherStraight()
+		{
+			ThreeCardPokerGame game = new ThreeCardPokerGame();
+
+			Player player1 = new Player("0");
+			player1.TakeCard("6h");
+			player1.TakeCard("5d");
+			player1.TakeCard("4h");
+
+			game.AddPlayer(player1);
+
+			Player player2 = new Player("1");
+			player2.TakeCard("3h");
+			player2.TakeCard("As");
+			player2.TakeCard("2d");
+
+			game.AddPlayer(player2);
+
+			Player player3 = new Player("2");
+			player3.TakeCard("9d");
+			player3.TakeCard("9s");
+			player3.TakeCard("Kd");
+
+			game.AddPlayer(player3);
+
+			Assert.AreEqual(game.GetWinner(), "0");
+		}
+
+		[TestMethod]
 		public void AceHighStraight()
 		{
 			ThreeCardPokerGame game = new ThreeCardPokerGame();
